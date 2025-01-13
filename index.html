@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Library Management System - NSS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.cdnfonts.com/css/minecraft-3" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Minecraft', sans-serif;
+    }
+    
+    .text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 2);
+}
+
+
+  </style>
+</head>
+
+<body class="bg-[url('/assets/MinecraftTrailer.jpeg')] bg-cover bg-center h-full">
+  <nav class=" 
+  bg-cover bg-black/80 flex flex-row space-between p-2  ">
+    <img src="./assets/Chakravuya-Archives.png" alt="" class="w-[40vw]">
+    
+  </nav>
+  
+  <main class="container flex flex-col justify-center items-center h-[80vh] w-[100vw] m-1 p-1 gap-4">
+    <section class="" id="greeting-section">
+      <h1 class="text-[3rem] text-white text-shadow  ">Welcome 2 Chakravuya Archives </h1>
+    </section>
+    <section class="flex justify-center gap-2" id="navigation-boxes">
+    <a href="">  <div  id="add-items" class="h-36  w-36 rounded bg-[url('./assets/Bookshelf.png')] bg-cover bg-center flex justify-center items-center bg-cyan-500/50 ">
+        <button class="text-xl  text-orange-600 shadow-lg border border-white shadow-white/50 p-0.5 rounded bg-[#c3e5e7]/75">Add Records</button>
+        
+      
+      </div>
+    </a>
+     <a href="#"> <div class="  h-36  w-36 rounded bg-[url('./assets/Table.gif')] bg-cover bg-center flex justify-center items-center bg-cyan-500/50" id="update-items">
+        <button class="text-xl  text-orange-600 shadow-lg border border-white shadow-white/50 p-0.5 rounded bg-[#c3e5e7]/75">Update Records </button>
+      </div> </a>
+      
+    </section>
+    
+  </main>
+  <footer class="bg-black">
+    <p class="text-sm text-white text-center" id="footer-txt">&copy;</p>
+  </footer>
+  <script>
+    const myparagraph = document.querySelector("#footer-txt")
+    myparagraph.textContent += ` ${new Date().getFullYear()} Team Chakravuya All Rights Reserved `
+  </script>
+</body>
+
+</html>
