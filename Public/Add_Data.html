@@ -4,11 +4,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>Add Data</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.cdnfonts.com/css/minecraft-3" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer>script.js</script>
 </head>
 
-<body>
+<body class="bg-[#393e46] ">
+   <nav class=" 
+  bg-cover bg-[#222831] flex flex-row space-between p-2  ">
+     <a href="../index.html">
+    <img src="../assets/Chakravuya-Archives.png" alt="" class="w-[40vw]">
+     </a>
+  </nav>
+  
+  <main class="container h-[80vh] sm:my-16 sm:h-full flex flex-col justify-center bg-[#393E46]  items-center ">
+    <h1 class="mb-6 text-3xl text-white">Add Records...</h1>
+    <form action="" class="flex  flex-col  justify-around bg-[#fd7014] p-4 mx-2 rounded-lg mb-10">
+      <div class="grid grid-cols-2 gap-4">
+        <input type="number" name="SN" id="SN" class=" text-lg py-1 px-2 rounded" placeholder="Roll No " required>
+        <input type="text" name="NOS" id="NOS" class="text-lg py-1 px-2 rounded" placeholder="Patreon's Name" required>
+        <input type="text" name="TOB" id="TOB" class="text-lg py-1 px-2 rounded" placeholder="Book Title" required>
+        <input type="date" name="DOB" id="DOB" class="text-lg py-1 px-2 rounded w-[100%] text-black" value="Borrowed Date" required>
+      </div>
+      <div class="flex w-full justify-center ">
+        
 
+      <button type="submit"  class="mt-4 bg-white inline-block text-lg py-1 px-4 rounded  " id="myBtn">Add</button>
+            </div>
+    </form>
+    <button class="bg-white text-cyan p-2 rounded ">View Records</button>
+    
+  </main>
+  
+    <footer class="bg-[#222831]">
+    <p class="text-sm text-white text-center" id="footer-txt">&copy;</p>
+  </footer>
+  <script>
+    const myparagraph = document.querySelector("#footer-txt")
+    myparagraph.textContent += ` ${new Date().getFullYear()} Team Chakravuya All Rights Reserved `
+    
+  const today = new Date().toISOString().split("T")[0];
+  document.getElementById("DOB").value = today;
+
+  </script>
 </body>
 
 </html>
