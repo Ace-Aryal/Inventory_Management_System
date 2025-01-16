@@ -1,5 +1,5 @@
 const myForm = document.querySelector ("form")
-let patreaonsData = []
+export let patreaonsData = []
 
 myForm.addEventListener("submit",e=> {
   e.preventDefault()
@@ -17,7 +17,7 @@ myForm.addEventListener("submit",e=> {
   
   patreaonsData.push(patreonData)
   
-  export default patreaonsData
+  
   
   
   myForm.querySelector("#SN").value = ""
@@ -26,3 +26,4 @@ myForm.addEventListener("submit",e=> {
   
   alert("Record Added Sucessfully")
 })
+

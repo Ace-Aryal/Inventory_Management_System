@@ -4,11 +4,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>Update Recordw</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.cdnfonts.com/css/minecraft-3" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  
 </head>
 
-<body>
+<body class="bg-[#393e46] h-[100vh] sm:h-full">
+       <nav class=" 
+  bg-cover bg-[#222831] flex flex-row space-between p-2  ">
+     <a href="../index.html">
+    <img src="../assets/Chakravuya-Archives.png" alt="" class="w-[40vw]">
+     </a>
+  </nav>
+  <main class="cobtainer flex flex-col justify-center items-center">
+    <h1 class="text-white text-3xl m-6">Records...</h1>
+    <section class="container flex flex-col  ">
+      <div class="container grid grid-cols-[1fr_3fr_3fr_1fr_1fr_1fr] justify-items-center  items-center gap-x-1 gap-y-2" id="records-container">
+        <h2 class="bg-[#fd7014] w-full p-2 block h-full text-center text-white">ID</h2>
+        <h2 class="bg-[#fd7014] w-full p-2 block h-full text-center text-white">Patreon's Name</h2>
+        <h2 class="bg-[#fd7014] w-full p-2 block h-full text-center text-white">Title Of Book</h2>
+        <h2 class="bg-[#fd7014] w-full p-2 block h-full text-center text-white">Days Left</h2>
+        <h2 class="col-span-2 h-full bg-[#fd7014] w-full p-2 block text-center text-white">Update</h2>
+        <p class="bg-white w-full p-2 block h-full">492</p>
+        <p class="bg-white w-full p-2 block h-full">Dipesh</p>
+        <p class="bg-white w-full p-2 block h-full">Harry Potter</p>
+        <p class="bg-white w-full p-2 block h-full">5</p>
+        <p class="bg-cyan-400 w-full p-2 block h-full">Edit</p>
+        <p class="bg-red-400 w-full p-2 block h-full">Delete</p>
+        
+      </div>
+      <div id="pagination" class="flex justify-between mx-8 my-8">
+        <p class=" text-white p-1 rounded">Showing 1 of 1 entries</p>
+        <div class="flex gap-2">
+          <button class="bg-[#fd7014] text-white p-1 rounded" >Prev</button>
+          <button class="bg-[#fd7014] text-white p-1 rounded">Next</button
+        </div>
+      </div>
+      
+    </section>
+    
+    
+  </main>
 
+    <footer class="bg-[#222831]">
+    <p class="text-sm text-white text-center" id="footer-txt">&copy;</p>
+  </footer>
+  <script>
+    const myparagraph = document.querySelector("#footer-txt")
+    myparagraph.textContent += ` ${new Date().getFullYear()} Team Chakravuya All Rights Reserved `
+  </script>
 </body>
 
 </html>
