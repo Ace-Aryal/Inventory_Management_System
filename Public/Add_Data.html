@@ -9,14 +9,23 @@
   <link href="https://fonts.cdnfonts.com/css/minecraft-3" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
   <script type="module" src="./script.js" defer>script.js</script>
+  <script src="./dataManager.js" type="module" charset="utf-8" defer></script>
 </head>
 
 <body class="bg-[#393e46] ">
    <nav class=" 
-  bg-cover bg-[#222831] flex flex-row space-between p-2  ">
+  bg-cover bg-[#222831] flex flex-row justify-between p-2  ">
      <a href="../index.html">
     <img src="../assets/Chakravuya-Archives.png" alt="" class="w-[40vw]">
      </a>
+         <div class="flex gap-2 pr-4">
+      <a href="#">
+    <li class="list-none text-white bg-orange-500 py-1 px-2 rounded ">Add</li>
+      </a>
+      <a href="./Update_Data.html">
+    <li  class="list-none text-white bg-orange-500 py-1 px-2 rounded">Update</li>
+      </a>
+    </div>
   </nav>
   
   <main class="container h-[80vh] sm:my-16 sm:h-full flex flex-col justify-center bg-[#393E46]  items-center ">
@@ -34,7 +43,9 @@
       <button type="submit"  class="mt-4 bg-white inline-block text-lg py-1 px-4 rounded  " id="myBtn">Add</button>
             </div>
     </form>
+    <a href="./Update_Data.html">
     <button class="bg-white text-cyan p-2 rounded ">View Records</button>
+    </a>
     
   </main>
   

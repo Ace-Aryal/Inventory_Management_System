@@ -1,5 +1,14 @@
+import { addData } from "./dataManager.js"
+
 const myForm = document.querySelector ("form")
-export let patreaonsData = []
+
+export  function copyPatreonData() {
+  // Tab to edit
+  return patreaonsData
+}
+
+function initScript() {
+  // Tab to edit
 
 myForm.addEventListener("submit",e=> {
   e.preventDefault()
@@ -7,7 +16,7 @@ myForm.addEventListener("submit",e=> {
   const patreonName = myForm.querySelector("#NOS").value
   const titleOfBook = myForm.querySelector("#TOB").value
   const borrowedDate = myForm.querySelector("#DOB").value
-  console.log(patreonID , borrowedDate , titleOfBook , patreonName)
+  
   const patreonData = {
     id: patreonID,
     name: patreonName,
@@ -15,7 +24,7 @@ myForm.addEventListener("submit",e=> {
     borrowedDate
   }
   
-  patreaonsData.push(patreonData)
+  addData(patreonData)
   
   
   
@@ -26,4 +35,11 @@ myForm.addEventListener("submit",e=> {
   
   alert("Record Added Sucessfully")
 })
+}
+
+// Conditionally execute code
+if ( window.location.pathname.includes("Add_Data.html")) {
+  
+  initScript()
+}
 

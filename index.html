@@ -12,8 +12,18 @@
 
 <body class="bg-[url('/assets/MinecraftTrailer.jpeg')] bg-cover bg-center h-full">
   <nav class=" 
-  bg-cover bg-black/80 flex flex-row space-between p-2  ">
+  bg-cover bg-black/80 flex w-full justify-between p-2  ">
     <img src="./assets/Chakravuya-Archives.png" alt="" class="w-[40vw]">
+    
+    <div class="flex gap-2 pr-4">
+      <a href="./Public/Add_Data.html">
+    <li class="list-none text-white bg-orange-500 py-1 px-2 rounded ">Add</li>
+      </a>
+      <a href="./Public/Update_Data.html">
+    <li  class="list-none text-white bg-orange-500 py-1 px-2 rounded">Update</li>
+      </a>
+    </div>
+
     
   </nav>
   
@@ -22,13 +32,13 @@
       <h1 class="text-[3rem] text-white text-shadow  ">Welcome 2 Chakravuya Archives </h1>
     </section>
     <section class="flex justify-center gap-2" id="navigation-boxes">
-    <a href="">  <div  id="add-items" class="h-36  w-36 rounded bg-[url('./assets/Bookshelf.png')] bg-cover bg-center flex justify-center items-center bg-cyan-500/50 ">
+    <a href="./Public/Add_Data.html">  <div  id="add-items" class="h-36  w-36 rounded bg-[url('./assets/Bookshelf.png')] bg-cover bg-center flex justify-center items-center bg-cyan-500/50 ">
         <button class="text-xl  text-orange-600 shadow-lg border border-white shadow-white/50 p-0.5 rounded bg-[#c3e5e7]/75">Add Records</button>
         
       
       </div>
     </a>
-     <a href="#"> <div class="  h-36  w-36 rounded bg-[url('./assets/Table.gif')] bg-cover bg-center flex justify-center items-center bg-cyan-500/50" id="update-items">
+     <a href="./Public/Update_Data.html"> <div class="  h-36  w-36 rounded bg-[url('./assets/Table.gif')] bg-cover bg-center flex justify-center items-center bg-cyan-500/50" id="update-items">
         <button class="text-xl  text-orange-600 shadow-lg border border-white shadow-white/50 p-0.5 rounded bg-[#c3e5e7]/75">Update Records </button>
       </div> </a>
       
