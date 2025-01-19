@@ -1,4 +1,4 @@
-import { getData , deleteData } from "./dataManager.js"
+import { getData , deleteData , updateData} from "./dataManager.js"
 
 const displayGrid = document.querySelector ("#records-container")
 
@@ -102,8 +102,10 @@ function displayRecords() {
 }
 
 function editPatreonData({target}) {
+  patreonsData = getData()
+  
   const targetObjectID = target.id // original id
-  if(target.classList.contains("fa-pen-to-square")){
+  if(target.classList.contains("fa-pen-to-square")){ // handling when clicked edit
     target.classList.remove("fa-pen-to-square")
     target.classList.add("fa-floppy-disk")
     idEl.contentEditable = true
@@ -112,13 +114,29 @@ function editPatreonData({target}) {
     dateEl.contentEditable = true
     
     
+    
 }else{
+  // handling when user saves changes
 target.classList.remove("fa-floppy-disk")
 target.classList.add("fa-pen-to-square")
-idEl.contentEditable = false
+    idEl.contentEditable = false
     nameEl.contentEditable = false
     titleOfBookEl.contentEditable = false
     dateEl.contentEditable = false
+    updateDataArray()
+    function updateDataArray() {
+      // Tab to edit
+      const updatedID = idEl.innerText
+      const updatedName = nameEl.innerText
+      const updatedTitleOfBook = titleOfBookEl.innerText
+      const updatedDate = dateEl.innerText
+      
+      updateData(targetObjectID,updatedID,updatedName,updatedTitleOfBook,updatedDate)
+      
+      
+    }
+    
+    
 }
 
 }

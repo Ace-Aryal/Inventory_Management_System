@@ -37,3 +37,19 @@ localStorage.setItem("records", patreonsDataString)
 
   
 }
+
+
+export const updateData = (originalId , updatedID, updatedName , updatedTitleOfBook ,updatedDate) => {
+  patreonsData.forEach(object =>  {
+  if(object.id == originalId) {
+    object.id = updatedID
+    object.name = updatedName
+    object.titleOfBook = updatedTitleOfBook
+    object.borrowedDate = updatedDate
+  }
+  }
+  )
+  let patreonsDataString = JSON.stringify(patreonsData) // stringify
+localStorage.setItem("records", patreonsDataString)
+  console.log(patreonsData)
+}
