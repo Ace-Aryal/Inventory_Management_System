@@ -2,10 +2,6 @@ import { addData } from "./dataManager.js"
 
 const myForm = document.querySelector ("form")
 
-export  function copyPatreonData() {
-  // Tab to edit
-  return patreaonsData
-}
 
 function initScript() {
   // Tab to edit
