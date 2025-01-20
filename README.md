@@ -18,7 +18,7 @@ The project features a **Minecraft-inspired landing page** with the iconic **Min
   - Stock Name
   - Stock Quantity
   - Date of Stock (Stocked At)
-- **Search Filter** *(Coming Soon)*:
+- **Search Filter** :
   - A feature to quickly locate specific stocks in the inventory.
 
 ---
