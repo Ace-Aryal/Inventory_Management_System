@@ -1,7 +1,7 @@
 import { getData , deleteData , updateData} from "./dataManager.js"
 
 const displayGrid = document.querySelector ("#records-container")
-
+const searchBar = document.querySelector ("#search-bar")
 
 let patreonsData = getData()
 
@@ -145,6 +145,34 @@ target.classList.add("fa-pen-to-square")
   
   
 }
+
+searchBar.addEventListener("input", e=> {
+  
+  patreonsData = getData()
+  if (e.target.value == "") {
+    clearDisplayGrid()
+    displayRecords()
+    
+  }
+  
+  let currentSearchValue = e.target.value
+  patreonsData = patreonsData.filter(data=> data.name.includes(currentSearchValue))
+  
+  
+  clearDisplayGrid()
+  displayRecords()
+  
+  function clearDisplayGrid () {
+    let recordElementsParagraphs = displayGrid.querySelectorAll("p")
+    let recordElementsIcons = displayGrid.querySelectorAll("i")
+    let recordElements = [...recordElementsParagraphs, ...recordElementsIcons]
+    recordElements.forEach(element => {
+    displayGrid.removeChild(element)
+})
+    
+  }
+  
+})
 
 
 
